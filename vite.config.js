@@ -14,6 +14,10 @@ const config = ({ mode }) => {
     define: {
       "process.env.NODE_ENV": `"${mode}"`,
     },
+    server: {
+      host: "0.0.0.0", // Bind to all network interfaces
+      port: 5173,      // Optional: specify the port
+    },
     build: {
       outDir: "build",
       rollupOptions: {
